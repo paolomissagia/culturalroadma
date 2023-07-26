@@ -1,0 +1,15 @@
+<button
+  type="button"
+  class="p-4 w-3/4 mx-auto flex flex-col text-center items-center border-2 border-gray-700 rounded-lg focus:border-indigo-500"
+  (click)="onClick()"
+>
+  <div
+    class="hidden sm:flex w-20 h-20 items-center justify-center rounded-full bg-gray-800 text-indigo-400 mb-5 flex-shrink-0"
+  >
+    <i [ngClass]="getIconName()"></i>
+  </div>
+  <div>
+    <h2 class="text-white text-lg font-medium mb-3">{{ optionTitle }}</h2>
+    <p class="leading-relaxed text-base">{{ optionDescription }}</p>
+  </div>
+</button>
