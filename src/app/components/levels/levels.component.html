@@ -1,0 +1,35 @@
+<div
+  class="container px-5 mx-auto min-h-screen flex flex-col items-center justify-center"
+>
+  <div class="text-center mb-12 sm:mb-20">
+    <h1 class="sm:text-3xl text-2xl text-white mb-4">LEVELS</h1>
+    <p class="text-base leading-relaxed mx-auto text-gray-400 text-opacity-80">
+      You&apos;ve chosen {{ category }}. Now choose a level to proceed.
+    </p>
+  </div>
+  <div class="flex flex-wrap gap-5 sm:gap-0">
+    <app-menu-option
+      [optionIcon]="'fa-regular fa-star'"
+      [optionTitle]="'Beginner'"
+      [optionDescription]="'Just Starting? We\'ve got you covered.'"
+      (optionFunction)="handleLevel($event)"
+    >
+    </app-menu-option>
+    <app-menu-option
+      [optionIcon]="'fa-solid fa-star-half-stroke'"
+      [optionTitle]="'Intermediate'"
+      [optionDescription]="
+        'You have some experience? Let\'s take it to the next level.'
+      "
+      (optionFunction)="handleLevel($event)"
+    >
+    </app-menu-option>
+    <app-menu-option
+      [optionIcon]="'fa-solid fa-star'"
+      [optionTitle]="'Advanced'"
+      [optionDescription]="'You\'re a pro? Let\'s see what you got.'"
+      (optionFunction)="handleLevel($event)"
+    >
+    </app-menu-option>
+  </div>
+</div>
