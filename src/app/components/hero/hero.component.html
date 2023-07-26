@@ -1,0 +1,30 @@
+<div
+  class="container mx-auto px-5 flex md:flex-row flex-col items-center justify-center h-[80vh]"
+>
+  <div
+    class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
+  >
+    <h2 class="title-font font-semibold text-white tracking-wider text-sm mb-3">
+      LITERATURE, CINEMA & MUSIC
+    </h2>
+    <h1 class="sm:text-4xl text-3xl mb-4 font-medium text-white">
+      Guides for Everyone
+    </h1>
+    <p class="mb-8 leading-relaxed">
+      Start your journey with a curated list of books, movies, and classical
+      music.
+    </p>
+    <div class="flex justify-center">
+      <button
+        type="button"
+        class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+        (click)="handleStart()"
+      >
+        Start
+      </button>
+    </div>
+  </div>
+  <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 hidden md:flex h-[90vh]">
+    <img src="../../../assets/cello.svg" alt="" />
+  </div>
+</div>
