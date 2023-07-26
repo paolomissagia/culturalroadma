@@ -1,0 +1,33 @@
+<div
+  class="container px-5 mx-auto min-h-screen flex flex-col items-center justify-center"
+>
+  <div class="text-center mb-12 sm:mb-20">
+    <h1 class="sm:text-3xl text-2xl text-white mb-4">CATEGORIES</h1>
+    <p class="text-base leading-relaxed mx-auto text-gray-400 text-opacity-80">
+      Let&apos;s Start! Pick an area of your interest.
+    </p>
+  </div>
+  <div class="flex flex-wrap gap-5 sm:gap-0">
+    <app-menu-option
+      [optionIcon]="'fa-solid fa-pen-nib'"
+      [optionTitle]="'Literature'"
+      [optionDescription]="'The Finest Books of Western Civilization.'"
+      (optionFunction)="handleCategory($event)"
+    >
+    </app-menu-option>
+    <app-menu-option
+      [optionIcon]="'fa-solid fa-video'"
+      [optionTitle]="'Cinema'"
+      [optionDescription]="'An Amazing Blend of Movies and Documentaries.'"
+      (optionFunction)="handleCategory('Cinema')"
+    >
+    </app-menu-option>
+    <app-menu-option
+      [optionIcon]="'fa-solid fa-music'"
+      [optionTitle]="'Music'"
+      [optionDescription]="'Find the Best of Classical, Opera and Ballet.'"
+      (optionFunction)="handleCategory('Music')"
+    >
+    </app-menu-option>
+  </div>
+</div>
