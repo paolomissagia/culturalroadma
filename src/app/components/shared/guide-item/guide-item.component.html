@@ -1,0 +1,22 @@
+<div class="flex relative pb-8">
+  <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+    <div
+      [ngClass]="
+        itemLast
+          ? 'w-1 bg-gray-800 pointer-events-none'
+          : 'h-full w-1 bg-gray-800 pointer-events-none'
+      "
+    ></div>
+  </div>
+  <div
+    class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10"
+  >
+    <i [ngClass]="getIconName()"></i>
+  </div>
+  <div class="flex-grow pl-4">
+    <h2 class="font-medium title-font text-sm text-white mb-1 tracking-wider">
+      {{ itemTitle }}
+    </h2>
+    <p class="leading-relaxed">{{ itemAuthor }}</p>
+  </div>
+</div>
