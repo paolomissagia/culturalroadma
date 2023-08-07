@@ -6,14 +6,14 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./guide-item.component.css'],
 })
 export class GuideItemComponent {
-  @Input() itemTitle: string = '';
-  @Input() itemAuthor: string = '';
-  @Input() itemIcon: string = '';
+  @Input() itemTitle: any;
+  @Input() itemAuthor: any;
+  @Input() itemNumber: any;
   @Input() itemLast: boolean = false;
 
   constructor() {}
 
   getIconName(): string {
-    return `${this.itemIcon} text-2xl`;
+    return `fa-solid fa-${this.itemNumber} text-2xl`;
   }
 }

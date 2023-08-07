@@ -1,15 +1,25 @@
+<!-- Navbar -->
 <app-navbar></app-navbar>
+<!-- Hero -->
 <app-hero [(start)]="isStarted"></app-hero>
-<ng-container *ngIf="isStarted">
-  <app-categories [(category)]="selectedCategory"></app-categories>
-</ng-container>
-<ng-container *ngIf="selectedCategory">
-  <app-levels
-    [(level)]="selectedLevel"
-    [category]="selectedCategory"
-  ></app-levels>
-</ng-container>
-<ng-container *ngIf="selectedLevel">
-  <app-guide [category]="selectedCategory" [level]="selectedLevel"></app-guide>
-</ng-container>
+<!-- Categories -->
+<app-categories
+  *ngIf="isStarted"
+  [(category)]="selectedCategory"
+></app-categories>
+<!-- Levels -->
+<app-levels
+  *ngIf="selectedCategory"
+  [(level)]="selectedLevel"
+  [category]="selectedCategory"
+></app-levels>
+<!-- Guide -->
+<app-guide
+  *ngIf="selectedLevel"
+  [category]="selectedCategory"
+  [level]="selectedLevel"
+  [(final)]="isFinal"
+></app-guide>
+<!-- Final -->
+<app-final *ngIf="isFinal"></app-final>
 <router-outlet></router-outlet>

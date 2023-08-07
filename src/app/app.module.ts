@@ -10,6 +10,10 @@ import { MenuOptionComponent } from './components/shared/menu-option/menu-option
 import { LevelsComponent } from './components/levels/levels.component';
 import { GuideComponent } from './components/guide/guide.component';
 import { GuideItemComponent } from './components/shared/guide-item/guide-item.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FinalComponent } from './components/final/final.component';
+import { BoxComponent } from './components/shared/box/box.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +24,13 @@ import { GuideItemComponent } from './components/shared/guide-item/guide-item.co
     MenuOptionComponent,
     LevelsComponent,
     GuideComponent,
-    GuideItemComponent
+    GuideItemComponent,
+    FinalComponent,
+    BoxComponent,
+    FooterComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

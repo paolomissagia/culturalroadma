@@ -11,6 +11,6 @@ export class GuidesService {
   constructor(private httpClient: HttpClient) {}
 
   getGuides(category: string, level: string): Observable<any> {
-    return this.httpClient.get(this.url + category + '/' + level);
+    return this.httpClient.get(`${this.url}${category}/${level}`);
   }
 }

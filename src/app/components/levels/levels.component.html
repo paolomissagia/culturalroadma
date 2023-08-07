@@ -1,5 +1,6 @@
 <div
   class="container px-5 mx-auto min-h-screen flex flex-col items-center justify-center"
+  id="levels-component"
 >
   <div class="text-center mb-12 sm:mb-20">
     <h1 class="sm:text-3xl text-2xl text-white mb-4">LEVELS</h1>
@@ -7,12 +8,13 @@
       You&apos;ve chosen {{ category }}. Now choose a level to proceed.
     </p>
   </div>
-  <div class="flex flex-wrap gap-5 sm:gap-0">
+  <div class="container mx-auto flex flex-col sm:flex-row gap-5">
     <app-menu-option
       [optionIcon]="'fa-regular fa-star'"
       [optionTitle]="'Beginner'"
       [optionDescription]="'Just Starting? We\'ve got you covered.'"
       (optionFunction)="handleLevel($event)"
+      class="p-4 w-3/4 max-w-xs mx-auto flex flex-col text-center items-center border-2 border-gray-700 rounded-lg focus:border-indigo-500"
     >
     </app-menu-option>
     <app-menu-option
@@ -22,6 +24,7 @@
         'You have some experience? Let\'s take it to the next level.'
       "
       (optionFunction)="handleLevel($event)"
+      class="p-4 w-3/4 max-w-xs mx-auto flex flex-col text-center items-center border-2 border-gray-700 rounded-lg focus:border-indigo-500"
     >
     </app-menu-option>
     <app-menu-option
@@ -29,6 +32,7 @@
       [optionTitle]="'Advanced'"
       [optionDescription]="'You\'re a pro? Let\'s see what you got.'"
       (optionFunction)="handleLevel($event)"
+      class="p-4 w-3/4 max-w-xs mx-auto flex flex-col text-center items-center border-2 border-gray-700 rounded-lg focus:border-indigo-500"
     >
     </app-menu-option>
   </div>

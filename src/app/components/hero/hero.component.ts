@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-hero',
@@ -9,10 +10,14 @@ export class HeroComponent {
   @Input() start: boolean = false;
   @Output() startChange: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  constructor() {}
+  constructor(private viewportScroller: ViewportScroller) {}
 
   handleStart() {
-    this.start = !this.start;
+    this.start = true;
     this.startChange.emit(this.start);
+    // Scroll to the next section
+    setTimeout(() => {
+      this.viewportScroller.scrollToAnchor('categories-component');
+    }, 500);
   }
 }
