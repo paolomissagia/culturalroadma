@@ -10,4 +10,5 @@ export class AppComponent {
   isStarted: boolean = false;
   selectedCategory: string = '';
   selectedLevel: string = '';
+  isFinal: boolean = false;
 }
