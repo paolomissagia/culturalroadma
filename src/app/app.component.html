@@ -3,26 +3,23 @@
 <!-- Hero -->
 <app-hero [(start)]="isStarted"></app-hero>
 <!-- Categories -->
-<ng-container *ngIf="isStarted">
-  <app-categories [(category)]="selectedCategory"></app-categories>
-</ng-container>
+<app-categories
+  *ngIf="isStarted"
+  [(category)]="selectedCategory"
+></app-categories>
 <!-- Levels -->
-<ng-container *ngIf="selectedCategory">
-  <app-levels
-    [(level)]="selectedLevel"
-    [category]="selectedCategory"
-  ></app-levels>
-</ng-container>
+<app-levels
+  *ngIf="selectedCategory"
+  [(level)]="selectedLevel"
+  [category]="selectedCategory"
+></app-levels>
 <!-- Guide -->
-<ng-container *ngIf="selectedLevel">
-  <app-guide
-    [category]="selectedCategory"
-    [level]="selectedLevel"
-    [(final)]="isFinal"
-  ></app-guide>
-</ng-container>
+<app-guide
+  *ngIf="selectedLevel"
+  [category]="selectedCategory"
+  [level]="selectedLevel"
+  [(final)]="isFinal"
+></app-guide>
 <!-- Final -->
-<ng-container *ngIf="isFinal">
-  <app-final></app-final>
-</ng-container>
+<app-final *ngIf="isFinal"></app-final>
 <router-outlet></router-outlet>
