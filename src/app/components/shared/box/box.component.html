@@ -1,0 +1,24 @@
+<div class="p-4 md:w-1/2 lg:w-2/5 w-full mx-auto">
+    <div class="h-full bg-gray-800 bg-opacity-40 p-4 md:p-8 rounded">
+      <h2 class="text-xl text-indigo-400 tracking-widest font-medium text-center mb-5">
+        {{ boxTitle }}
+      </h2>
+      <p class="leading-relaxed mb-6 text-center">{{boxText}}</p>
+      <div class="flex justify-around">
+        <ng-container *ngIf="boxType === 'save'">
+            <i class="fa-solid fa-champagne-glasses h-12 w-12 hidden md:flex"></i>
+        </ng-container>
+        <ng-container *ngIf="boxType === 'share'">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//culturalroadmap-app.vercel.app/">
+                <i class="fa-brands fa-facebook h-12 w-12"></i>
+              </a>
+              <a href="https://twitter.com/intent/tweet?text=https%3A//culturalroadmap-app.vercel.app/">
+                <i class="fa-brands fa-twitter h-12 w-12"></i>
+              </a>
+              <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//culturalroadmap-app.vercel.app/&title=Cultural%20Roadmap&summary=&source=">
+                <i class="fa-brands fa-linkedin h-12 w-12"></i>
+              </a>
+        </ng-container>
+      </div>
+    </div>
+  </div>
