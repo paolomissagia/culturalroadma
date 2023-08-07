@@ -1,61 +1,47 @@
-<div
-  class="container px-5 mx-auto min-h-screen flex flex-col items-center justify-center shrink"
->
-  <div class="text-center mb-5 md:mb-10 mx-auto shrink">
-    <h1
-      class="sm:text-3xl text-2xl font-medium title-font text-white mb-4 capitalize"
-    >
-      {{ category }} {{ level }} Guide
-    </h1>
-    <p
-      class="text-base leading-relaxed lg:w-3/4 mx-auto text-gray-400 text-opacity-80"
-    >
-      Your handpicked list is ready!
-    </p>
-    <div class="flex mt-6 justify-center">
-      <div class="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+<ng-container *ngIf="!guideData">
+  <span>Loading</span>
+</ng-container>
+<ng-container *ngIf="guideData">
+  <div
+    class="container px-5 mx-auto min-h-screen flex flex-col items-center justify-center shrink"
+  >
+    <div class="text-center mb-5 md:mb-10 mx-auto shrink">
+      <h1
+        class="sm:text-3xl text-2xl font-medium title-font text-white mb-4 capitalize"
+      >
+        {{ category }} {{ level }} Guide
+      </h1>
+      <p
+        class="text-base leading-relaxed lg:w-3/4 mx-auto text-gray-400 text-opacity-80"
+      >
+        Your handpicked list is ready!
+      </p>
+      <div class="flex mt-6 justify-center">
+        <div class="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+      </div>
+    </div>
+    <div class="flex flex-wrap w-full shrink">
+      <div id="guide" class="lg:w-2/3 md:w-1/2 w-[85%] md:pr-10 mx-auto lg:pl-20">
+        <ng-container *ngFor="let item of guideData[0].items; let i = index">
+          <app-guide-item
+            [itemNumber]="i + 1"
+            [itemTitle]="item.title"
+            [itemAuthor]="item.author"
+          ></app-guide-item>
+        </ng-container>
+      </div>
+      <div class="md:w-1/3 hidden md:flex fill-white h-96">
+        <img src="../../../assets/road-map.svg" alt="roadmap" />
+      </div>
+    </div>
+    <div class="mx-auto shrink">
+      <button
+        type="button"
+        class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+        (click)="handleGuide()"
+      >
+        Next
+      </button>
     </div>
   </div>
-  <div class="flex flex-wrap w-full shrink">
-    <div id="guide" class="lg:w-2/3 md:w-1/2 w-[85%] md:pr-10 mx-auto lg:pl-20">
-      <app-guide-item
-        [itemIcon]="'fa-solid fa-1'"
-        [itemTitle]="'guide[0].title'"
-        [itemAuthor]="'guide[0].author'"
-      ></app-guide-item>
-      <app-guide-item
-        [itemIcon]="'fa-solid fa-2'"
-        [itemTitle]="'guide[0].title'"
-        [itemAuthor]="'guide[0].author'"
-      ></app-guide-item>
-      <app-guide-item
-        [itemIcon]="'fa-solid fa-3'"
-        [itemTitle]="'guide[0].title'"
-        [itemAuthor]="'guide[0].author'"
-      ></app-guide-item>
-      <app-guide-item
-        [itemIcon]="'fa-solid fa-4'"
-        [itemTitle]="'guide[0].title'"
-        [itemAuthor]="'guide[0].author'"
-      ></app-guide-item>
-      <app-guide-item
-        [itemIcon]="'fa-solid fa-5'"
-        [itemTitle]="'guide[0].title'"
-        [itemAuthor]="'guide[0].author'"
-        [itemLast]="true"
-      ></app-guide-item>
-    </div>
-    <div class="md:w-1/3 hidden md:flex fill-white h-96">
-      <img src="../../../assets/road-map.svg" alt="roadmap" />
-    </div>
-  </div>
-  <div class="mx-auto shrink">
-    <button
-      type="button"
-      class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
-      (click)="handleGuide()"
-    >
-      Next
-    </button>
-  </div>
-</div>
+</ng-container>
