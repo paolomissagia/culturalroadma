@@ -9,29 +9,38 @@
     </p>
   </div>
   <div class="container mx-auto flex flex-col sm:flex-row gap-5">
-    <app-menu-option
-      [optionIcon]="'fa-solid fa-pen-nib'"
-      [optionTitle]="'Literature'"
-      [optionDescription]="'The Finest Books of Western Civilization.'"
-      (optionFunction)="handleCategory($event)"
-      class="p-4 w-3/4 max-w-xs mx-auto flex flex-col text-center items-center border-2 border-gray-700 rounded-lg focus:border-indigo-500"
+    <div
+      class="p-4 w-3/4 max-w-xs mx-auto flex flex-col text-center items-center border-2 border-gray-700 rounded-lg hover:border-indigo-500"
     >
-    </app-menu-option>
-    <app-menu-option
-      [optionIcon]="'fa-solid fa-video'"
-      [optionTitle]="'Cinema'"
-      [optionDescription]="'An Amazing Blend of Movies and Documentaries.'"
-      (optionFunction)="handleCategory('Cinema')"
-      class="p-4 w-3/4 max-w-xs mx-auto flex flex-col text-center items-center border-2 border-gray-700 rounded-lg focus:border-indigo-500"
+      <app-menu-option
+        [optionIcon]="'fa-solid fa-pen-nib'"
+        [optionTitle]="'Literature'"
+        [optionDescription]="'The Finest Books of Western Civilization.'"
+        (optionFunction)="handleCategory($event)"
+      >
+      </app-menu-option>
+    </div>
+    <div
+      class="p-4 w-3/4 max-w-xs mx-auto flex flex-col text-center items-center border-2 border-gray-700 rounded-lg hover:border-indigo-500"
     >
-    </app-menu-option>
-    <app-menu-option
-      [optionIcon]="'fa-solid fa-music'"
-      [optionTitle]="'Music'"
-      [optionDescription]="'Find the Best of Classical, Opera and Ballet.'"
-      (optionFunction)="handleCategory('Music')"
-      class="p-4 w-3/4 max-w-xs mx-auto flex flex-col text-center items-center border-2 border-gray-700 rounded-lg focus:border-indigo-500"
+      <app-menu-option
+        [optionIcon]="'fa-solid fa-video'"
+        [optionTitle]="'Cinema'"
+        [optionDescription]="'An Amazing Blend of Movies and Documentaries.'"
+        (optionFunction)="handleCategory('Cinema')"
+      >
+      </app-menu-option>
+    </div>
+    <div
+      class="p-4 w-3/4 max-w-xs mx-auto flex flex-col text-center items-center border-2 border-gray-700 rounded-lg hover:border-indigo-500"
     >
-    </app-menu-option>
+      <app-menu-option
+        [optionIcon]="'fa-solid fa-music'"
+        [optionTitle]="'Music'"
+        [optionDescription]="'Find the Best of Classical, Opera and Ballet.'"
+        (optionFunction)="handleCategory('Music')"
+      >
+      </app-menu-option>
+    </div>
   </div>
 </div>

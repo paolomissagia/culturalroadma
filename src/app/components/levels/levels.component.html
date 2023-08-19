@@ -9,31 +9,37 @@
     </p>
   </div>
   <div class="container mx-auto flex flex-col sm:flex-row gap-5">
-    <app-menu-option
-      [optionIcon]="'fa-regular fa-star'"
-      [optionTitle]="'Beginner'"
-      [optionDescription]="'Just Starting? We\'ve got you covered.'"
-      (optionFunction)="handleLevel($event)"
-      class="p-4 w-3/4 max-w-xs mx-auto flex flex-col text-center items-center border-2 border-gray-700 rounded-lg focus:border-indigo-500"
+    <div
+      class="p-4 w-3/4 max-w-xs mx-auto flex flex-col text-center items-center border-2 border-gray-700 rounded-lg hover:border-indigo-500"
     >
-    </app-menu-option>
-    <app-menu-option
-      [optionIcon]="'fa-solid fa-star-half-stroke'"
-      [optionTitle]="'Intermediate'"
-      [optionDescription]="
-        'You have some experience? Let\'s take it to the next level.'
-      "
-      (optionFunction)="handleLevel($event)"
-      class="p-4 w-3/4 max-w-xs mx-auto flex flex-col text-center items-center border-2 border-gray-700 rounded-lg focus:border-indigo-500"
+      <app-menu-option
+        [optionIcon]="'fa-regular fa-star'"
+        [optionTitle]="'Beginner'"
+        [optionDescription]="'Just Starting? We\'ve got you covered.'"
+        (optionFunction)="handleLevel($event)"
+      />
+    </div>
+    <div
+      class="p-4 w-3/4 max-w-xs mx-auto flex flex-col text-center items-center border-2 border-gray-700 rounded-lg hover:border-indigo-500"
     >
-    </app-menu-option>
-    <app-menu-option
-      [optionIcon]="'fa-solid fa-star'"
-      [optionTitle]="'Advanced'"
-      [optionDescription]="'You\'re a pro? Let\'s see what you got.'"
-      (optionFunction)="handleLevel($event)"
-      class="p-4 w-3/4 max-w-xs mx-auto flex flex-col text-center items-center border-2 border-gray-700 rounded-lg focus:border-indigo-500"
+      <app-menu-option
+        [optionIcon]="'fa-solid fa-star-half-stroke'"
+        [optionTitle]="'Intermediate'"
+        [optionDescription]="
+          'You have some experience? Let\'s take it to the next level.'
+        "
+        (optionFunction)="handleLevel($event)"
+      />
+    </div>
+    <div
+      class="p-4 w-3/4 max-w-xs mx-auto flex flex-col text-center items-center border-2 border-gray-700 rounded-lg hover:border-indigo-500"
     >
-    </app-menu-option>
+      <app-menu-option
+        [optionIcon]="'fa-solid fa-star'"
+        [optionTitle]="'Advanced'"
+        [optionDescription]="'You\'re a pro? Let\'s see what you got.'"
+        (optionFunction)="handleLevel($event)"
+      />
+    </div>
   </div>
 </div>
