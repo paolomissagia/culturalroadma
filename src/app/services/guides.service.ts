@@ -255,7 +255,6 @@ export class GuidesService {
 
   getGuides(category: string, level: string): Observable<any> {
     const filteredData = this.applyFilters(category, level, this.guidesData);
-    console.log(filteredData);
     return of(filteredData);
   }
 
